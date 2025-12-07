@@ -1,0 +1,560 @@
+/* Basic reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+  color: #333;
+  background: #fff;
+}
+
+.container {
+  width: 1100px;
+  max-width: 94%;
+  margin: 0 auto;
+}
+
+/* Header */
+.site-header {
+  background: whitesmoke;
+  padding: 12px 0;
+  border: 1px solid black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-family: 'Montserrat', sans-serif;
+  color: #2aa6c1;
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: 1px;
+  background: #ffffff;
+  padding: 12px 20px;
+  border-radius: 2px;
+}
+
+.brand a {
+  text-decoration: none;
+  color: #2aa6c1;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 8px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #666;
+  padding: 14px 20px;
+  background: #fff;
+  border-radius: 2px;
+  display: block;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, .04);
+}
+
+.main-nav li.active a {
+  background: #f06f5e;
+  color: #fff;
+}
+
+/* Ensure page content sits below the fixed header */
+main {
+  padding-top: 80px;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=1920&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(28, 38, 44, 0.6);
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+  color: #fff;
+  padding: 70px 20px;
+}
+
+.kicker {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 3px;
+  margin-bottom: 18px;
+  color: #cfd8dc;
+  font-size: 16px;
+}
+
+.hero-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 72px;
+  line-height: 0.95;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.25);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-teal {
+  background: #2ac9e8;
+  border-radius: 14px;
+}
+
+.btn-coral {
+  background: #d1110e;
+  border-radius: 14px;
+}
+
+/* Info Section 1 */
+.info-section1 {
+  background-color: #2ac9e8;
+  width: 100%;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.info-section1 h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.info-section1 p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* Footer */
+.site-footer {
+  padding: 20px 0;
+  text-align: center;
+  background: #f4f4f4;
+  color: #333;
+}
+
+/* Sections */
+.section {
+  padding: 60px 0;
+  margin: 0;
+}
+
+/* About Services */
+.about {
+  padding: 0;
+}
+
+.about .services {
+  display: flex;
+  gap: 0;
+  width: 100%;
+  margin: 0;
+}
+
+.service {
+  flex: 1;
+  padding: 80px 40px;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+}
+
+.service-1 {
+  background: rgba(240, 111, 94, 0.9);
+}
+
+.service-2 {
+  background: rgba(47, 60, 73, 0.9);
+}
+
+.service-3 {
+  background: rgba(45, 182, 209, 0.9);
+}
+
+.service .icon {
+  font-size: 80px;
+  margin-bottom: 18px;
+  opacity: 0.9;
+}
+
+.service h3 {
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.service p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Portfolio Section */
+.portfolio {
+  background: #fff;
+}
+
+.portfolio .section-title {
+  margin-bottom: 6px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+}
+
+.portfolio .section-sub {
+  text-align: center;
+  color: #8a8a8a;
+  margin-bottom: 40px;
+}
+
+.services-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.service-box {
+  width: 180px;
+  background: #f7f7f7;
+  padding: 30px 20px;
+  border-radius: 4px;
+  transition: 0.3s;
+  cursor: pointer;
+  text-align: center;
+}
+
+.service-box.active {
+  background: #d9534f;
+  color: #fff;
+}
+
+.service-box.active .icon-circle {
+  background: white;
+}
+
+.service-box.active h3 {
+  color: #fff;
+}
+
+.service-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.icon-circle {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-circle img {
+  width: 50px;
+  opacity: 0.8;
+}
+
+.service-box h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Unique Section */
+.unique-section {
+  background: #fff;
+  padding: 60px 0;
+}
+
+.unique-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.text-box {
+  flex: 1;
+}
+
+.text-box h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.text-box p {
+  margin-bottom: 18px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.image-box {
+  flex: 1;
+}
+
+.image-box img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 6px;
+}
+
+/* Blog Section */
+.blog {
+  background: #f7f8fa;
+}
+
+.blog-inner {
+  padding: 40px 0;
+}
+
+.blog .section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+
+.blog-grid {
+  display: flex;
+  gap: 36px;
+}
+
+.blog-list {
+  flex: 1;
+}
+
+.post {
+  background: #fff;
+  padding: 22px;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.post h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.post .meta {
+  color: #999;
+  font-size: 14px;
+}
+
+.blog-feature {
+  width: 420px;
+}
+
+.feature-image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.feature-card {
+  background: #fff;
+  padding: 18px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  margin-top: -40px;
+  position: relative;
+  z-index: 2;
+}
+
+.feature-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.feature-card .meta {
+  color: #999;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* External Section */
+.external {
+  background: #fff;
+}
+
+.section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.section-sub {
+  font-size: 16px;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* Contact Section */
+.contact {
+  background: #fff;
+  text-align: center;
+}
+
+.contact-inner {
+  text-align: center;
+}
+
+.contact-grid {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+
+.contact-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px;
+  border: 1px solid #ddd;
+  background: #fafafa;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.contact-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.map {
+  flex: 1;
+  max-width: 420px;
+}
+
+.map iframe {
+  width: 100%;
+  height: 330px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+  .hero-title {
+    font-size: 48px;
+  }
+
+  .brand {
+    font-size: 22px;
+  }
+
+  .main-nav ul {
+    display: none;
+  }
+
+  .about .services {
+    flex-direction: column;
+  }
+
+  .service {
+    width: 100%;
+  }
+
+  .unique-container {
+    flex-direction: column;
+  }
+
+  .image-box img {
+    max-width: 100%;
+  }
+
+  .blog-grid {
+    flex-direction: column;
+  }
+
+  .blog-feature {
+    width: 100%;
+  }
+
+  .contact-grid {
+    flex-direction: column;
+  }
+
+  .map {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 520px;
+  }
+
+  .hero-title {
+    font-size: 34px;
+  }
+
+  .kicker {
+    font-size: 14px;
+  }
+
+  .btn {
+    padding: 10px 16px;
+  }
+
+  .service-box {
+    width: 100%;
+  }
+}
